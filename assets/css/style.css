@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ddd;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+section {
+  background-color: white;
+  margin: 30px 230px;
+  border-radius: 8px;
+}
+
+ul,
+ol,
+li {
+  padding-bottom: 15px;
+}
+
+hr {
+  margin-top: 18px;
+}
+
+.display-stucture {
+  padding-top: 30px;
+  padding-bottom: 55px;
+}
+
+.display-stucture hr {
+  margin-bottom: 20px;
+}
+
+.counter-1 {
+  padding-top: 30px;
+}
+
+/* ======================section 2====================== */
+
+/* ====================roman=================== */
+
+.counter-1 .roman {
+  padding: 20px 50px;
+  list-style-type: upper-roman;
+}
+
+.counter-1 .roman {
+  counter-reset: roman;
+}
+
+.counter-1 .roman .roman-number {
+  counter-increment: roman;
+}
+
+.counter-1 .roman .roman-number::after {
+  content: "" counter(roman) "";
+  font-weight: bold;
+}
+
+/* ================letter======================= */
+
+.counter-1 .roman .letter {
+  counter-reset: letter;
+  list-style-type: lower-latin;
+  padding-inline: 40px;
+}
+
+.counter-1 .roman .letter .letter-number {
+  counter-increment: letter;
+  color: #4a8c7b;
+}
+
+.counter-1 .roman .letter .letter-number::after {
+  content: "" counter(roman) "." counter(letter) "";
+  font-weight: bold;
+  color: #4a8c7b;
+}
+
+/* =================number======================== */
+
+.roman .number {
+  list-style-type: decimal;
+  counter-reset: number;
+  padding-inline: 40px;
+}
+
+.roman .number .sub-number {
+  counter-increment: number;
+  color: #4a8c7b;
+}
+
+.roman .number .sub-number::after {
+  content: "" counter(roman) "." counter(number) "";
+  font-weight: bold;
+  color: #4a8c7b;
+}
+
+/* ====================peroid=======================*/
+
+.roman .peroid {
+  counter-reset: peroid;
+  list-style-type: disc;
+  padding-inline: 40px;
+}
+
+.roman .peroid .peroid-number {
+  counter-increment: peroid;
+  color: #e67d37;
+}
+
+.roman .peroid .peroid-number::after {
+  content: "" counter(roman) "." counter(peroid) "";
+  font-weight: bold;
+  color: #e67d37;
+}
+
+/* ====================circle=======================*/
+
+.roman .number .circle {
+  list-style-type: circle;
+  counter-reset: circle;
+  padding-inline: 40px;
+}
+
+.roman .number .circle .circle-number {
+  counter-increment: circle;
+  color: #8264ce;
+}
+
+.roman .number .circle .circle-number::after {
+  content: "" counter(roman) "." counter(number) "." counter(circle) "";
+  font-weight: bold;
+  color: #8264ce;
+}
+
+/* =======================square========================= */
+
+.roman .number .circle .square {
+  counter-reset: square;
+  padding-inline: 40px;
+}
+
+.roman .number .circle .square .square-number {
+  counter-increment: square;
+  color: #e67d37;
+}
+
+.roman .number .circle .square .square-number::after {
+  content: "" counter(roman) "." counter(number) "." counter(circle) "."
+    counter(square) "";
+  font-weight: bold;
+  color: #e67d37;
+}
+
+/* ============================section 3=========================== */
+
+/* =========================list-item============================ */
+
+.counter-2 {
+  padding-top: 30px;
+}
+
+.counter-2 .list {
+  padding: 20px 50px;
+  list-style-type: none;
+}
+
+.counter-2 .list {
+  counter-reset: list;
+}
+
+.counter-2 .list .list-number {
+  counter-increment: list;
+}
+
+.counter-2 .list .list-number::before {
+  content: "" counter(list) "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* ===========================nested item============================== */
+
+.counter-2 .list .nested {
+  counter-reset: nested;
+  list-style-type: none;
+  padding-inline: 40px;
+}
+
+.counter-2 .list .nested .nested-number {
+  counter-increment: nested;
+}
+
+.counter-2 .list .nested .nested-number::before {
+  content: "" counter(list) "." counter(nested) "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 8px;
+}
